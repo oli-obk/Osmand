@@ -501,7 +501,7 @@ public class FavoritesTreeFragment extends OsmandExpandableListFragment {
 						sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_fav_subject));
 						sendIntent.putExtra(Intent.EXTRA_STREAM,
 								FileProvider.getUriForFile(getActivity(),
-										getActivity().getPackageName() + ".fileprovider", dst));
+										 "net.osmand.fileprovider", dst));
 						sendIntent.setType("text/plain");
 						startActivity(sendIntent);
 					} catch (IOException e) {
