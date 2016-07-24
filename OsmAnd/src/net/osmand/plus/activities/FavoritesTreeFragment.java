@@ -493,7 +493,7 @@ public class FavoritesTreeFragment extends OsmandExpandableListFragment {
 					}
 					File src = helper.getExternalFile();
 					File dst = new File(dir, src.getName());
-					try {
+					//try {
 						Algorithms.fileCopy(src, dst);
 						final Intent sendIntent = new Intent();
 						sendIntent.setAction(Intent.ACTION_SEND);
@@ -506,10 +506,10 @@ public class FavoritesTreeFragment extends OsmandExpandableListFragment {
 						//startActivity(sendIntent);
 						//sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 						startActivity(Intent.createChooser(sendIntent, getString(R.string.shared_string_share)));
-					} catch (IOException e) {
-						Toast.makeText(getActivity(), "Error sharing favorites: " + e.getMessage(), Toast.LENGTH_LONG).show();
-						e.printStackTrace();
-					}
+					//} catch (IOException e) {
+						//Toast.makeText(getActivity(), "Error sharing favorites: " + e.getMessage(), Toast.LENGTH_LONG).show();
+					//	e.printStackTrace();
+					//}
 				}
 			};
 
